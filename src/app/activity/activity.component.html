@@ -1,0 +1,17 @@
+<div ngModelGroup="activities" #activitiesGroup="ngModelGroup" class="array-group">
+  <div *ngFor="let activity of activities; let i=index">
+
+    <div [ngModelGroup]="i.toString()" #activityGroup="ngModelGroup" class="group">
+      <input id="activityName" [(ngModel)]="activity.activityName" name="activityName">
+      <br>
+      <input id="activityDate" [(ngModel)]="activity.date" name="activityDate">
+      <br>
+
+      <app-tasks [tasks]="activity.tasks"></app-tasks>
+
+    </div>
+  </div>
+
+  <button type="button" (click)="addItem(activities)"> add activity </button>
+
+</div>

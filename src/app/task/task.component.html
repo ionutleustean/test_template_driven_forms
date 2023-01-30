@@ -1,0 +1,7 @@
+<div class="group" *ngIf="task">
+
+  <input id="taskName" [(ngModel)]="task.taskName"  name="taskName" >
+  <br>
+  <input *ngIf="task.taskName === 'aaa' || task.taskName === 'bbb'" id="taskDuration" [(ngModel)]="task.taskDuration" name="taskDuration" [required]="task.taskName === 'bbb'">
+  <br>
+</div>

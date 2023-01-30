@@ -1,0 +1,16 @@
+
+<div ngModelGroup="projects" #projectsGroup="ngModelGroup" class="array-group">
+  <div *ngFor="let project of projects; let i=index">
+    <div [ngModelGroup]="i.toString()" #projectGroup="ngModelGroup" class="group">
+      <input id="name" [(ngModel)]="project.projectName" name="name">
+      <br>
+
+      <app-activity [activities]="project.activities" > </app-activity>
+
+    </div>
+
+  </div>
+
+  <button type="button" (click)="addItem(projects)"> add project </button>
+
+</div>

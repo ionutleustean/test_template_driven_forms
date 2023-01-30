@@ -1,0 +1,8 @@
+<div ngModelGroup="tasks" #tasksGroup="ngModelGroup" class="array-group">
+  <div *ngFor="let task of tasks; let i=index">
+    <app-task [ngModelGroup]="i.toString()" #tasksGroup="ngModelGroup"  [task]="task"> </app-task>
+  </div>
+
+  <button type="button" (click)="addItem(tasks)"> add task </button>
+
+</div>

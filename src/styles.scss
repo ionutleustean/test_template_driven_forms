@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+.group{
+  border: 1px solid black;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.array-group{
+  border: 1px solid #bd00ff;
+  background: rgba(255,0,0,0.2);
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;}
+
+
+input.ng-invalid {
+  border: 2px solid red;
+
+}

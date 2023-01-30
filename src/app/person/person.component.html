@@ -1,0 +1,25 @@
+
+
+<div ngModelGroup="persons" #personsGroup="ngModelGroup" class="array-group" [appCrossValidator]="true">
+
+  {{personsGroup.errors | json}}
+
+  <div *ngFor="let person of persons; let i=index">
+    <div [ngModelGroup]="i.toString()" #personGroup="ngModelGroup" class="group">
+      {{personGroup.errors | json}}
+<!--      <app-invisible-form-control [ngModel]="person.uuid" name="uuid"> </app-invisible-form-control>-->
+
+      <input id="name" [(ngModel)]="person.name" name="name">
+      <br>
+      <input id="age" [(ngModel)]="person.age" name="age" type="number">
+      <br>
+
+      <app-projects [projects]="person.projects" > </app-projects>
+
+    </div>
+
+  </div>
+
+  <button type="button" (click)="addItem(persons)"> add person </button>
+
+</div>
