@@ -7,7 +7,7 @@
       <input id="activityDate" [(ngModel)]="activity.date" name="activityDate">
       <br>
 
-      <app-tasks [tasks]="activity.tasks"></app-tasks>
+      <app-tasks ngModelGroup="tasks" #tasksGroup="ngModelGroup" [tasks]="activity.tasks"></app-tasks>
 
     </div>
   </div>

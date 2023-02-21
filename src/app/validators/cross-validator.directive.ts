@@ -21,6 +21,7 @@ export class CrossValidatorDirective implements Validator {
       let error = null;
 
       Object.keys(value).forEach(i => {
+        control.controls[i].setErrors(null);
         const index = Number(i)
         if (index > 0) {
           if (value[i].age <= value[(index - 1).toString()]?.age) {

@@ -1,4 +1,7 @@
-<div ngModelGroup="tasks" #tasksGroup="ngModelGroup" class="array-group">
+<div  class="array-group">
+
+
+
   <div *ngFor="let task of tasks; let i=index">
     <app-task [ngModelGroup]="i.toString()" #tasksGroup="ngModelGroup"  [task]="task"> </app-task>
   </div>

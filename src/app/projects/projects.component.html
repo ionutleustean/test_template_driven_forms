@@ -2,7 +2,7 @@
 <div ngModelGroup="projects" #projectsGroup="ngModelGroup" class="array-group">
   <div *ngFor="let project of projects; let i=index">
     <div [ngModelGroup]="i.toString()" #projectGroup="ngModelGroup" class="group">
-      <input id="name" [(ngModel)]="project.projectName" name="name">
+      <input id="name" [(ngModel)]="project.projectName" name="projectName">
       <br>
 
       <app-activity [activities]="project.activities" > </app-activity>

@@ -10,6 +10,8 @@ export class AppComponent implements OnInit{
 
   formModel: Model = new Model();
 
+  tasks = [];
+
   ngOnInit(): void {
     this.clearData()
     this.patchData()

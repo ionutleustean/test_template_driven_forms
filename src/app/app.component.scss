@@ -1,11 +1,16 @@
 
-
+.container{
+  display: flex;
+  flex-direction: row;
+}
 .left{
   width: 50%;
-  float: left;
 }
 
 .right {
   width: 50%;
-  float: left;
+}
+
+.margin-top {
+  margin-top: 50px;
 }
